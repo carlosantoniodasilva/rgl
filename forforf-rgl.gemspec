@@ -4,35 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{forforf-rgl}
-  s.version = "0.5.0"
+  s.name = "forforf-rgl"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Horst Duchene"]
-  s.date = %q{2011-04-21}
-  s.description = %q{RGL is a framework for graph data structures and algorithms.
-
-The design of the library is much influenced by the Boost Graph Library (BGL)
-which is written in C++ heavily using its template mechanism.
-
-RGL currently contains a core set of algorithm patterns:
-
-* Breadth First Search
-* Depth First Search
-
-The algorithm patterns by themselves do not compute any meaningful quantities
-over graphs, they are merely building blocks for constructing graph
-algorithms. The graph algorithms in RGL currently include:
-
-* Topological Sort
-* Connected Components
-* Strongly Connected Components
-* Transitive Closure
-* Transitive Reduction
-* Graph Condensation
-* Search cycles (contributed by Shawn Garbett)
-}
-  s.email = %q{monora@gmail.com}
+  s.date = "2011-12-01"
+  s.description = "RGL is a framework for graph data structures and algorithms.\n\nThe design of the library is much influenced by the Boost Graph Library (BGL)\nwhich is written in C++ heavily using its template mechanism.\n\nRGL currently contains a core set of algorithm patterns:\n\n* Breadth First Search\n* Depth First Search\n\nThe algorithm patterns by themselves do not compute any meaningful quantities\nover graphs, they are merely building blocks for constructing graph\nalgorithms. The graph algorithms in RGL currently include:\n\n* Topological Sort\n* Connected Components\n* Strongly Connected Components\n* Transitive Closure\n* Transitive Reduction\n* Graph Condensation\n* Search cycles (contributed by Shawn Garbett)\n"
+  s.email = "monora@gmail.com"
   s.extra_rdoc_files = [
     "ChangeLog",
     "README.rdoc"
@@ -119,6 +98,7 @@ algorithms. The graph algorithms in RGL currently include:
     "examples/north/g.14.9.graphml",
     "examples/north2.rb",
     "examples/rdep-rgl.rb",
+    "forforf-rgl.gemspec",
     "lib/rgl/adjacency.rb",
     "lib/rgl/base.rb",
     "lib/rgl/bidirectional.rb",
@@ -126,7 +106,6 @@ algorithms. The graph algorithms in RGL currently include:
     "lib/rgl/connected_components.rb",
     "lib/rgl/dot.rb",
     "lib/rgl/enumerable_ext.rb",
-    "lib/rgl/forforf_rgl_adjacency.rb",
     "lib/rgl/graphxml.rb",
     "lib/rgl/implicit.rb",
     "lib/rgl/mutable.rb",
@@ -135,8 +114,8 @@ algorithms. The graph algorithms in RGL currently include:
     "lib/rgl/transitiv_closure.rb",
     "lib/rgl/transitivity.rb",
     "lib/rgl/traversal.rb",
+    "pkg/forforf-rgl-1.0.0.gem",
     "rakelib/dep_graph.rake",
-    "spec/forforf_rgl_adjacency_spec.rb",
     "spec/graph.dot",
     "spec/graph.png",
     "spec/spec_helper.rb",
@@ -154,11 +133,11 @@ algorithms. The graph algorithms in RGL currently include:
     "test/TestUnDirectedGraph.rb",
     "test/test_helper.rb"
   ]
-  s.homepage = %q{http://github.com/forforf/rgl}
+  s.homepage = "http://github.com/forforf/rgl"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{"Ruby Graph Library"}
+  s.rubygems_version = "1.8.10"
+  s.summary = "\"Ruby Graph Library\""
   s.test_files = [
     "examples/canvas.rb",
     "examples/examples.rb",
@@ -166,7 +145,6 @@ algorithms. The graph algorithms in RGL currently include:
     "examples/north.rb",
     "examples/north2.rb",
     "examples/rdep-rgl.rb",
-    "spec/forforf_rgl_adjacency_spec.rb",
     "spec/spec_helper.rb",
     "test/TestComponents.rb",
     "test/TestCycles.rb",
@@ -184,7 +162,6 @@ algorithms. The graph algorithms in RGL currently include:
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then

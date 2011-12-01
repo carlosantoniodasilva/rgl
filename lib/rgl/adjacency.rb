@@ -13,7 +13,6 @@
 # is created.
 
 require 'rgl/mutable'
-require 'rgl/forforf_rgl_adjacency'
 require 'set'
 
 module RGL
@@ -21,7 +20,6 @@ module RGL
   class DirectedAdjacencyGraph
 
     include MutableGraph
-    include ForforfRglAdjacency
 
     # Shortcut for creating a DirectedAdjacencyGraph:
     #
