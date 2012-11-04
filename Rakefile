@@ -62,9 +62,15 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
-RSpec::Core::RakeTask.new(:rcov) do |spec|
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
+#RSpec::Core::RakeTask.new(:rcov) do |spec|
+#  spec.pattern = 'spec/**/*_spec.rb'
+#  spec.rcov = true
+#end
+
+require 'rcov/rcovtask'
+Rcov::RcovTask.new do |t|
+  t.test_files = FileList['test/*.rb']
+  # t.verbose = true     # uncomment to see the executed command
 end
 
 task :default => :test

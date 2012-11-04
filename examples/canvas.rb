@@ -19,7 +19,7 @@ puts 'Displaying ' + filename
 # ruby canvas.rb north/g.14.9.graphml &
 
 File.open(filename) { |file|
-  graph = DirectedAdjacencyGraph.from_graphxml(file)      
+  graph = DirectedAdjacencyGraph.new.from_graphxml(file)      
   graph.write_to_graphic_file('gif', filename)
   graph.write_to_graphic_file('plain', filename)
   root = TkRoot.new{title "Ex1"}
