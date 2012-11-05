@@ -1,4 +1,5 @@
-$LOAD_PATH << "../lib"
+$: << "#{File.dirname(__FILE__)}/../lib"
+$: << "#{File.dirname(__FILE__)}"
 require 'test/unit'
 require 'rgl/adjacency'
 require 'test_helper'

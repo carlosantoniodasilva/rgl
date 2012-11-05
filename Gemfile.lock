@@ -3,12 +3,18 @@ GEM
   specs:
     diff-lcs (1.1.2)
     git (1.2.5)
-    jeweler (1.5.2)
-      bundler (~> 1.0.0)
+    jeweler (1.8.4)
+      bundler (~> 1.0)
       git (>= 1.2.5)
       rake
+      rdoc
+    json (1.7.5)
+    json (1.7.5-java)
     rake (0.8.7)
     rcov (0.9.9)
+    rcov (0.9.9-java)
+    rdoc (3.12)
+      json (~> 1.4)
     rspec (2.3.0)
       rspec-core (~> 2.3.0)
       rspec-expectations (~> 2.3.0)
@@ -20,11 +26,13 @@ GEM
     stream (0.5)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.0)
-  jeweler (~> 1.5.2)
+  bundler
+  jeweler (~> 1.8.4)
+  rake
   rcov
-  rspec (~> 2.3.0)
+  rspec
   stream (~> 0.5)

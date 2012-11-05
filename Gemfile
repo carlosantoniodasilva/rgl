@@ -10,8 +10,9 @@ group :development do
   # gem "rspec", "~> 2.3.0"
   # gem "bundler", "~> 1.2.1"
   # gem "jeweler", "~> 1.5.2"
+  gem "bundler"
   gem "rspec"
-  gem "jeweler"
+  gem "jeweler", "~> 1.8.4"
   gem "rcov", ">= 0"
   gem "rake"
 end
