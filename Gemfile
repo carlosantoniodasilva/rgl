@@ -13,6 +13,6 @@ group :development do
   gem "bundler"
   gem "rspec"
   gem "jeweler", "~> 1.8.4"
-  gem "rcov", ">= 0"
+  gem "rcov", ">= 0" if RUBY_VERSION < "1.9"
   gem "rake"
 end
