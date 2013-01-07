@@ -1,5 +1,3 @@
-require 'enumerator'
-
 require 'rgl/adjacency'
 require 'rgl/base'
 require 'rgl/condensation'
@@ -116,7 +114,7 @@ module RGL
           # Only add the edge v -> w if there is no other edge v -> x such that
           # w is reachable from x.  Make sure to completely skip the case where
           # x == w.
-          unless Enumerator.new(cg, :each_adjacent, v).any? do |x|
+          unless cg.to_enum(:each_adjacent, v).any? do |x|
             x != w && paths_from[x].include?(w)
           end then
             tr_cg.add_edge(v, w)
@@ -157,7 +155,7 @@ module RGL
 
         # Choose a single edge between the members of two different strongly
         # connected component to add to the graph.
-        edges = Enumerator.new(self, :each_edge)
+        edges = self.to_enum(:each_edge)
         tr_cg.each_adjacent(scc) do |scc2|
           g.add_edge(
             *edges.find do |v, w|
